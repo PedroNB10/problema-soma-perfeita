@@ -34,7 +34,7 @@ def merge_sort(l):
     return merge(l1, l2)
 
 
-# Gera a lista
+# Gera a lista (TA LENTO - IMPLEMENTA USANDO SET EH MAIS RAPIDOS)
 tamanho = int(input("Informe o tamanho da lista: "))
 random.seed(tamanho)
 l = []
