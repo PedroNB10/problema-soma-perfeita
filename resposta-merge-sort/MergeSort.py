@@ -37,12 +37,12 @@ def merge_sort(l):
 # Gera a lista (TA LENTO - IMPLEMENTA USANDO SET EH MAIS RAPIDOS)
 tamanho = int(input("Informe o tamanho da lista: "))
 random.seed(tamanho)
-l = []
+l = set()  # Usando set para garantir elementos únicos
 while len(l) < tamanho:
     num = random.randint(0, 2**17)
-    if num not in l:
-        l.append(num)
+    l.add(num)
 
+l = list(l)  # Convertendo de volta para lista para ordenação e manipulação
 # Gera o alvo
 alvo = random.randint(0, 2**17)
 while alvo % 2 == 0:
