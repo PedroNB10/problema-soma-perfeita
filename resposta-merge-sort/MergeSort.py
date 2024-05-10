@@ -53,20 +53,20 @@ l = merge_sort(l)
 
 # Conta pares cujo complemento soma para o alvo
 contador_pares = 0
-left = 0    # Ponteiro que aponta para o início da lista
-right = len(l) - 1  # Ponteiro que aponta para o final da lista
+esquerda = 0    # Ponteiro que aponta para o início da lista
+direita = len(l) - 1  # Ponteiro que aponta para o final da lista
 
 # Loop que ocorre enquanto os ponteiros não se cruzarem
-while left < right:
-    soma_elementos = l[left] + l[right]
+while esquerda < direita:
+    soma_elementos = l[esquerda] + l[direita]
     if soma_elementos == alvo:
         contador_pares += 1
-        # print(f"Par encontrado: ({l[left]}, {l[right]})")
-        left += 1
-        right -= 1
+        # print(f"Par encontrado: ({l[esquerda]}, {l[direita]})")
+        esquerda += 1
+        direita -= 1
     elif soma_elementos < alvo:
-        left += 1
+        esquerda += 1
     else:
-        right -= 1
+        direita -= 1
 
 print(f"Número de pares cujo complemento soma para {alvo}: {contador_pares}")
