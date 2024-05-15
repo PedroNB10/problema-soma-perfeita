@@ -32,6 +32,7 @@ class HashTable:
 if __name__ == '__main__':
 
     size = int(input("Informe o tamanho da lista: "))
+    print("\nTamanho da lista informado: ", size)
     random.seed(size)
     # Criação da Tabela hash com o total de slots equivalente ao tamanho informado
     hashtable = HashTable(size)

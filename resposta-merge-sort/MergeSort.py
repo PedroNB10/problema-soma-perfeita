@@ -35,6 +35,7 @@ def merge_sort(l):
 
 # Gera a lista
 size = int(input("Informe o tamanho da lista: "))
+print("\nTamanho da lista informado: ", size)
 random.seed(size)
 l = set()  # Usando set para garantir elementos únicos
 while len(l) < size:

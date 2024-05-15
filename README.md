@@ -4,6 +4,7 @@
   - [Importante:](#importante)
   - [Enunciado do Problema:](#enunciado-do-problema)
   - [Resolução](#resolução)
+    - [Rodando os Scripts](#rodando-os-scripts)
 
 ## Importante:
 - Não olhe códigos de outros ou da internet. Exceto os que são fornecidos. Também
@@ -63,3 +64,22 @@ diferentes da mesma ideia.)
 
 
 ## Resolução 
+### Rodando os Scripts
+
+Para que consiga rodar cada script primeiro selecione a pasta em que se encontra o script:
+
+```bash
+cd resposta-hash-table
+```
+
+Para rodar o script com a possibilidade de colocar o input do tamanho da lista, entre com:
+```bash
+python HashTable.py
+```
+
+Para rodar o script com um número do tamanho da lista pré-setado digite (lembre-se de alterar o arquivo `tamanho-lista.txt`):
+
+```bash
+time python MergeSort.py < ../tamanho-lista.txt
+```
+
