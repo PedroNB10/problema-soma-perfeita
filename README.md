@@ -5,6 +5,7 @@
   - [Enunciado do Problema:](#enunciado-do-problema)
   - [Resolução](#resolução)
     - [Rodando os Scripts](#rodando-os-scripts)
+      - [Exemplo de saída:](#exemplo-de-saída)
 
 ## Importante:
 - Não olhe códigos de outros ou da internet. Exceto os que são fornecidos. Também
@@ -77,9 +78,13 @@ Para rodar o script com a possibilidade de colocar o input do tamanho da lista, 
 python HashTable.py
 ```
 
-Para rodar o script com um número do tamanho da lista pré-setado digite (lembre-se de alterar o arquivo `tamanho-lista.txt`):
+Para rodar o script com um número do tamanho da lista pré-setado digite (lembre-se de alterar o arquivo `tamanho-lista.txt` com o tamanho desejado):
 
 ```bash
-time python MergeSort.py < ../tamanho-lista.txt
+time python HashTable.py < ../tamanho-lista.txt
 ```
 
+
+#### Exemplo de saída:
+
+<img alt="foto exemplo resposta" src="imgs/img.png" />
