@@ -1,6 +1,5 @@
 import random
 
-
 class HashTable:
     def __init__(self, size):
         # Inicializar a tabela hash com o tamanho informado

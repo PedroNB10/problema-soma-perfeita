@@ -5,9 +5,9 @@ if __name__ == '__main__':
     size = int(input("Informe o tamanho da lista: "))
     print("\nTamanho da lista informado: ", size)
     random.seed(size)
-    # Adiciona o primeiro valor à árvore binária ou seja o primeiro nó
+    # Adiciona o primeiro valor à árvore binária, ou seja, o primeiro nó
     l = bt.BinaryTree(random.randint(0, 2**17))
-    # contador de elementos que começa em 1 pois já adicionamos o primeiro
+    # Contador de elementos que começa em 1 pois já adicionamos o primeiro
     count = 1
 
     # Adiciona elementos à árvore binária com base no size
