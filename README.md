@@ -7,7 +7,8 @@
     - [Detalhes sobre a geração Randômica de elementos com base no tamanho da lista](#detalhes-sobre-a-geração-randômica-de-elementos-com-base-no-tamanho-da-lista)
     - [Solução 01 - Merge Sort com Duplo Ponteiro](#solução-01---merge-sort-com-duplo-ponteiro)
     - [Solução 02 - Tabela Hash](#solução-02---tabela-hash)
-    - [Solução 03 - Arvore Binária](#solução-03---arvore-binária)
+    - [Solução 03 - Árvore Binária](#solução-03---árvore-binária)
+      - [Observação:](#observação)
     - [Rodando os Scripts](#rodando-os-scripts)
       - [Exemplo de saída:](#exemplo-de-saída)
 
@@ -95,14 +96,31 @@ O código ```HashTable.py``` contém uma tabela hash desenvolvida com uma classe
 
 Os métodos utilizados nessa implementação foram:
 
-- | ``def _hash``: é o método para calcular o valor de hash com base no tamanho da tabela hash.
+- | ``def _hash(self, value):``: é o método para calcular o valor de hash com base no tamanho da tabela hash.
   
-- | ``def put``: é o método para adicionar os elementos na tabela hash, o qual primeiro é calculado o hash_key e em seguida verificado se o valor está na tabela hash. Se não estiver, é adicionado, assim a função permite que somente valores diferentes estejam na tabela hash.
+- | ``def put(self, value):``: é o método para adicionar os elementos na tabela hash, o qual primeiro é calculado o hash_key e em seguida verificado se o valor está na tabela hash. Se não estiver, é adicionado, assim a função permite que somente valores diferentes estejam na tabela hash.
 
-- | ``def contains``: é o método para  verificar se o elemento está contido na tabela hash.
+- | ``def contains(self, value):`` é o método para  verificar se o elemento está contido na tabela hash.
 
 
-### Solução 03 - Arvore Binária
+### Solução 03 - Árvore Binária
+
+O arquivo `BinaryTree.py` implementa uma estrutura de árvore binária com a classe `BinaryTree`. Esta classe possui as seguintes propriedades:
+
+- **self.value**: Valor do nó atual, que também é o valor do nó raiz quando a árvore é inicialmente criada.
+- **self.left**: Referência ao filho esquerdo do nó.
+- **self.right**: Referência ao filho direito do nó.
+
+Os métodos implementados são:
+
+- ``def __init__(self, value)``: Construtor que inicializa o nó com um valor e sem filhos.
+- ``def put(self, value)``: Adiciona elementos na árvore. Se o valor já existe, ele não é adicionado. Se o valor é menor que o valor do nó, ele é adicionado à esquerda; se for maior, à direita.
+- ``def print(self)``: Imprime os valores da árvore em uma travessia em ordem.
+- ``def contains(self, value)``: Verifica se um valor está contido na árvore, utilizando busca binária.
+- ``def find_complement(self, target)``: Encontra o número de pares de valores na árvore cuja soma é igual ao valor alvo (`target`).
+
+#### Observação: 
+o código `BinaryTree.py` contém apenas a implementação da classe enquanto o `main.py` utiliza a classe importada `BinaryTree`.
 
 ### Rodando os Scripts
 
