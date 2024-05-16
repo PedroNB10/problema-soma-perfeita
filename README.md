@@ -138,7 +138,7 @@ python HashTable.py
 Para rodar o script com um número do tamanho da lista pré-setado digite (lembre-se de alterar o arquivo `tamanho-lista.txt` com o tamanho desejado):
 
 ```bash
-time python HashTable.py < ../tamanho-lista.txt
+python HashTable.py < ../tamanho-lista.txt
 ```
 
 

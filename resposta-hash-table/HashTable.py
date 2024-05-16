@@ -1,4 +1,5 @@
 import random
+import time
 
 class HashTable:
     def __init__(self, size):
@@ -30,7 +31,7 @@ class HashTable:
 
 
 if __name__ == '__main__':
-
+    starttime = time.time()
     size = int(input("Informe o tamanho da lista: "))
     print("\nTamanho da lista informado: ", size)
     random.seed(size)
@@ -59,3 +60,4 @@ if __name__ == '__main__':
 
     print(f"Número de pares cujo complemento soma para {
           target}: {int(count/2)}")
+    print(f"Tempo de execução: {time.time() - starttime} segundos")

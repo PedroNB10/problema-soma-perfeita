@@ -1,4 +1,5 @@
 import random
+import time
 
 def merge(ord_l1, ord_l2):
     i = 0
@@ -37,44 +38,47 @@ def merge_sort(l):
     l2 = merge_sort(l2)
     return merge(l1, l2)
 
+if __name__ == '__main__':
+    starttime = time.time()
+    # Gera a lista
+    size = int(input("Informe o tamanho da lista: "))
+    print("\nTamanho da lista informado: ", size)
+    random.seed(size)
+    l = set()  # Usando set para garantir elementos únicos
+    while len(l) < size:
+        num = random.randint(0, 2**17)
+        l.add(num)
 
-# Gera a lista
-size = int(input("Informe o tamanho da lista: "))
-random.seed(size)
-l = set()  # Usando set para garantir elementos únicos
-while len(l) < size:
-    num = random.randint(0, 2**17)
-    l.add(num)
+    l = list(l)  # Convertendo de volta para lista para ordenação e manipulação
 
-l = list(l)  # Convertendo de volta para lista para ordenação e manipulação
-
-# Gera o alvo
-target = random.randint(0, 2**17)
-while target % 2 == 0:
+    # Gera o alvo
     target = random.randint(0, 2**17)
+    while target % 2 == 0:
+        target = random.randint(0, 2**17)
 
-# Ordena a lista
-l = merge_sort(l)
+    # Ordena a lista
+    l = merge_sort(l)
 
-# Conta pares cujo complemento soma para o alvo
-pair_counter = 0
-left = 0    # Ponteiro que aponta para o início da lista
-right = len(l) - 1  # Ponteiro que aponta para o final da lista
+    # Conta pares cujo complemento soma para o alvo
+    pair_counter = 0
+    left = 0    # Ponteiro que aponta para o início da lista
+    right = len(l) - 1  # Ponteiro que aponta para o final da lista
 
-# Loop que ocorre enquanto os ponteiros não se cruzarem
-while left < right:
-    sum_elements = l[left] + l[right]
-    
-    if sum_elements == target:
-        pair_counter += 1
-        # print(f"Par encontrado: ({l[esquerda]}, {l[direita]})")
-        left += 1
-        right -= 1
+    # Loop que ocorre enquanto os ponteiros não se cruzarem
+    while left < right:
+        sum_elements = l[left] + l[right]
         
-    elif sum_elements < target:
-        left += 1
-        
-    else:
-        right -= 1
+        if sum_elements == target:
+            pair_counter += 1
+            # print(f"Par encontrado: ({l[esquerda]}, {l[direita]})")
+            left += 1
+            right -= 1
+            
+        elif sum_elements < target:
+            left += 1
+            
+        else:
+            right -= 1
 
-print(f"Número de pares cujo complemento soma para {target}: {pair_counter}")
+    print(f"Número de pares cujo complemento soma para {target}: {pair_counter}")
+    print(f"Tempo de execução: {time.time() - starttime} segundos")

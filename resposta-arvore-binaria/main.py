@@ -1,7 +1,9 @@
 import random
 import BinaryTree as bt
+import time
 
 if __name__ == '__main__':
+    starttime = time.time()
     size = int(input("Informe o tamanho da lista: "))
     print("\nTamanho da lista informado: ", size)
     random.seed(size)
@@ -25,3 +27,4 @@ if __name__ == '__main__':
     complement_count = l.find_complement(target)
     print(f"Número de pares cujo complemento soma para {
           target}: {int(complement_count/2)}")
+    print(f"Tempo de execução: {time.time() - starttime} segundos")
