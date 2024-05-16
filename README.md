@@ -87,10 +87,10 @@ O código ```MergeSort.py``` utiliza o algoritmo de ordenação Merge Sort, que 
 
 ### Solução 02 - Tabela Hash
 
-O código ```HashTable.py``` contém uma tabela hash desenvolvido com uma classe chamada HashTable. Ela contém as seguintes propriedades:
+O código ```HashTable.py``` contém uma tabela hash desenvolvida com uma classe chamada HashTable. Ela contém as seguintes propriedades:
 
 - | **self.size** : é o tamanho da tabela hash
-- | **self.slots** : são os slots que serão inizializados com base no tamanho da hash table fornecido. Cada Slot contém uma lista vazia que será utilizada para adicionar elementos. 
+- | **self.slots** : são os slots que serão inicializados com base no tamanho da hash table fornecido. Cada Slot contém uma lista vazia que será utilizada para adicionar elementos. 
 - | **self.count** : é o contador de elementos que já foram inseridos na tabela hash.
 
 Os métodos utilizados nessa implementação foram:
