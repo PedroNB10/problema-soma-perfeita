@@ -49,9 +49,11 @@ if __name__ == '__main__':
     # Contar pares cujo complemento soma para o alvo
     count = 0
 
+    # Iterar sobre os slots da tabela hash e verificar se o complemento de cada número está presente na tabela
     for slot in hashtable.slots:
         for num in slot:
             compl = target - num
+            # caso o complemento seja 5 por exemplo e o número seja 5, não é um par então por isso a comparação compl != num
             if compl != num and hashtable.contains(compl):
                 count += 1
 
