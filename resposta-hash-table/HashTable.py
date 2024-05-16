@@ -10,22 +10,23 @@ class HashTable:
         self.count = 0
 
     # Função de hash, que retorna o resto da divisão do número informado pelo tamanho da tabela
-    def _hash(self, key):
-        return key % self.size
+    def _hash(self, value):
+        return value % self.size
 
     # Função para inserir um elemento na tabela
-    def put(self, key):
+    def put(self, value):
         # Calcular o hash do elemento
-        hash_key = self._hash(key)
+        hash_key = self._hash(value)
 
-        # Verificar se a chave já existe na posição do hash calculado
-        if key not in self.slots[hash_key]:
-            self.slots[hash_key].append(key)
+        # Verificar se o valor já existe na tabela
+        if not self.contains(value):
+            self.slots[hash_key].append(value)
             self.count += 1  # Incrementar o número de elementos inseridos
 
-    def contains(self, key):
-        hash_key = self._hash(key)
-        return key in self.slots[hash_key]
+    # verifica se o valor está na tabela
+    def contains(self, value):
+        hash_key = self._hash(value)
+        return value in self.slots[hash_key]
 
 
 if __name__ == '__main__':
@@ -45,6 +46,7 @@ if __name__ == '__main__':
     while target % 2 == 0:
         target = random.randint(0, 2**17)
 
+    # Contar pares cujo complemento soma para o alvo
     count = 0
 
     for slot in hashtable.slots:

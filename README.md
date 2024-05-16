@@ -6,7 +6,7 @@
   - [Resolução](#resolução)
     - [Detalhes sobre a geração Randômica de elementos com base no tamanho da lista](#detalhes-sobre-a-geração-randômica-de-elementos-com-base-no-tamanho-da-lista)
     - [Solução 01 - Merge Sort com Duplo Ponteiro](#solução-01---merge-sort-com-duplo-ponteiro)
-    - [Solução 02 - HashTable](#solução-02---hashtable)
+    - [Solução 02 - Tabela Hash](#solução-02---tabela-hash)
     - [Solução 03 - Arvore Binária](#solução-03---arvore-binária)
     - [Rodando os Scripts](#rodando-os-scripts)
       - [Exemplo de saída:](#exemplo-de-saída)
@@ -81,11 +81,26 @@ Portanto, para garantir que o programa funcione corretamente, o tamanho da lista
 
 ### Solução 01 - Merge Sort com Duplo Ponteiro
 
-O código MergeSort.py utiliza o algoritmo de ordenação Merge Sort, que divide recursivamente a lista ao meio até que cada subdivisão contenha apenas um elemento. Em seguida, mescla essas subdivisões ordenadas em uma única lista ordenada. Em seguida, foi implementada uma função para encontrar pares na lista ordenada cuja soma é igual a um valor alvo específico, usando uma abordagem de ponteiros para percorrer a lista de forma eficiente.
+O código ```MergeSort.py``` utiliza o algoritmo de ordenação Merge Sort, que divide recursivamente a lista ao meio até que cada subdivisão contenha apenas um elemento. Em seguida, mescla essas subdivisões ordenadas em uma única lista ordenada. Em seguida, foi implementada uma função para encontrar pares na lista ordenada cuja soma é igual a um valor alvo específico, usando uma abordagem de ponteiros para percorrer a lista de forma eficiente.
 
 
 
-### Solução 02 - HashTable
+### Solução 02 - Tabela Hash
+
+O código ```HashTable.py``` contém uma tabela hash desenvolvido com uma classe chamada HashTable. Ela contém as seguintes propriedades:
+
+- | **self.size** : é o tamanho da tabela hash
+- | **self.slots** : são os slots que serão inizializados com base no tamanho da hash table fornecido. Cada Slot contém uma lista vazia que será utilizada para adicionar elementos. 
+- | **self.count** : é o contador de elementos que já foram inseridos na tabela hash.
+
+Os métodos utilizados nessa implementação foram:
+
+- | ``def _hash``: é o método para calcular o valor de hash com base no tamanho da tabela hash.
+  
+- | ``def put``: é o método para adicionar os elementos na tabela hash, o qual primeiro é calculado o hash_key e em seguida verificado se o valor está na tabela hash. Se não estiver, é adicionado, assim a função permite que somente valores diferentes estejam na tabela hash.
+
+- | ``def contains``: é o método para  verificar se o elemento está contido na tabela hash.
+
 
 ### Solução 03 - Arvore Binária
 
