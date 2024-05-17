@@ -130,17 +130,12 @@ Para que consiga rodar cada script primeiro selecione a pasta em que se encontra
 cd resposta-hash-table
 ```
 
-Para rodar o script com a possibilidade de colocar o input do tamanho da lista, entre com:
+Para rodar o script digite no terminal:
 ```bash
 python HashTable.py
 ```
 
-Para rodar o script com um número do tamanho da lista pré-setado digite (lembre-se de alterar o arquivo `tamanho-lista.txt` com o tamanho desejado):
-
-```bash
-python HashTable.py < ../tamanho-lista.txt
-```
-
+Caso queira alterar o tamanho da lista modifique o arquivo ```tamanho-lista.txt```.
 
 #### Exemplo de saída:
 
