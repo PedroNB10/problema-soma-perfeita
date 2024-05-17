@@ -75,7 +75,7 @@ diferentes da mesma ideia.)
 
 Vale ressaltar que ao gerar números aleatórios com ```num = random.randint(0, 2**17)```, os números gerados estarão no intervalo entre 0 e 2¹⁷, ou seja, entre 0 e 131072 (inclusive). Isso significa que o número máximo de valores únicos que podem ser gerados é 131073 (incluindo zero).
 
-Se o tamanho da lista (size) for maior que 131073, o programa entrará em um loop infinito ao tentar adicionar elementos únicos a um conjunto (set). Isso acontece porque, após gerar todos os números possíveis no intervalo, não haverá novos números únicos disponíveis para serem adicionados.
+Se o tamanho da lista (size) for maior que 131073, o programa entrará em um loop infinito ao tentar adicionar elementos únicos a lista. Isso acontece porque, após gerar todos os números possíveis no intervalo, não haverá novos números únicos disponíveis para serem adicionados.
 
 Portanto, para garantir que o programa funcione corretamente, o tamanho da lista (size) não deve exceder 2¹⁷ + 1. Em outras palavras, o caso extremo para testar o programa é quando a lista contém até 131073 elementos.
 
