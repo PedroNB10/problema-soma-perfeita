@@ -96,6 +96,8 @@ O código ```HashTable.py``` contém uma tabela hash desenvolvida com uma classe
 
 Os métodos utilizados nessa implementação foram:
 
+- | ``def __init__(self, size):`` Construtor que inicializa a tabela com o tamanho `size` especificado.
+
 - | ``def _hash(self, value):``: é o método para calcular o valor de hash com base no tamanho da tabela hash.
   
 - | ``def put(self, value):``: é o método para adicionar os elementos na tabela hash, o qual primeiro é calculado o hash_key e em seguida verificado se o valor está na tabela hash. Se não estiver, é adicionado, assim a função permite que somente valores diferentes estejam na tabela hash.
