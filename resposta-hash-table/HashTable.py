@@ -49,7 +49,7 @@ if __name__ == '__main__':
     print("\nTamanho da lista informado: ", size)
     random.seed(size)
     # Criação da Tabela hash com o total de slots equivalente ao tamanho informado
-    hashtable = HashTable(size)
+    hashtable = HashTable(size//2)
 
     # Inserir elementos aleatórios na tabela hash
     while hashtable.count < size:
