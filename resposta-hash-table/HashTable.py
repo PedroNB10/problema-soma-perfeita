@@ -31,8 +31,21 @@ class HashTable:
 
 
 if __name__ == '__main__':
+    
+    try:
+        with open("../tamanho-lista.txt", "r") as file:
+            size = int(file.readline().strip())
+    except:
+        size = None
+
+    while size == None:
+        try:
+            size = int(input("Informe o tamanho da lista: "))
+        except:
+            print("Valor inválido, tente novamente.")
+            size = None
+
     starttime = time.time()
-    size = int(input("Informe o tamanho da lista: "))
     print("\nTamanho da lista informado: ", size)
     random.seed(size)
     # Criação da Tabela hash com o total de slots equivalente ao tamanho informado

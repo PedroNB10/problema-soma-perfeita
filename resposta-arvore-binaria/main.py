@@ -3,8 +3,21 @@ import BinaryTree as bt
 import time
 
 if __name__ == '__main__':
+
+    try:
+        with open("../tamanho-lista.txt", "r") as file:
+            size = int(file.readline().strip())
+    except:
+        size = None
+
+    while size == None:
+        try:
+            size = int(input("Informe o tamanho da lista: "))
+        except:
+            print("Valor inválido, tente novamente.")
+            size = None
+
     starttime = time.time()
-    size = int(input("Informe o tamanho da lista: "))
     print("\nTamanho da lista informado: ", size)
     random.seed(size)
     # Adiciona o primeiro valor à árvore binária, ou seja, o primeiro nó

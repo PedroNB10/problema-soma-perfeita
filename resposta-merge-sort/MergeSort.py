@@ -39,9 +39,22 @@ def merge_sort(l):
     return merge(l1, l2)
 
 if __name__ == '__main__':
+    try:
+        with open("../tamanho-lista.txt", "r") as file:
+            size = int(file.readline().strip())
+    except:
+        size = None
+
+    while size == None:
+        try:
+            size = int(input("Informe o tamanho da lista: "))
+        except:
+            print("Valor inválido, tente novamente.")
+            size = None
+   
+
+
     starttime = time.time()
-    # Gera a lista
-    size = int(input("Informe o tamanho da lista: "))
     print("\nTamanho da lista informado: ", size)
     random.seed(size)
     l = set()  # Usando set para garantir elementos únicos
