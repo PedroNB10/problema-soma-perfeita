@@ -71,6 +71,6 @@ if __name__ == '__main__':
             if compl != num and hashtable.contains(compl):
                 count += 1
 
-    print(f"Número de pares cujo complemento soma para {
-          target}: {int(count/2)}")
+    print(f"Número de pares cujo complemento soma para \
+          {target}: {int(count/2)}")
     print(f"Tempo de execução: {time.time() - starttime} segundos")
