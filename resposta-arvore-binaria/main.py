@@ -38,6 +38,6 @@ if __name__ == '__main__':
 
     # Encontrar o número de pares cujo complemento soma para o valor target
     complement_count = l.find_complement(target)
-    print(f"Número de pares cujo complemento soma para {
-          target}: {int(complement_count/2)}")
+    print(f"Número de pares cujo complemento soma para \
+          {target}: {int(complement_count/2)}")
     print(f"Tempo de execução: {time.time() - starttime} segundos")
